@@ -10,10 +10,10 @@ public class UserDao {
     private static UserDao singleton;
 
     private UserDao() {
-        users.add(new User("Andrei", "Khaustau", 39, "andruha", "a123"));
-        users.add(new User("Misha", "Stepovikov", 31, "misha", "m123"));
-        users.add(new User("Dima", "Danilov", 40, "dima", "d123"));
-        users.add(new User("Sasha", "Fatykhov", 47, "sasha", "s123"));
+        users.add(new User(1, "Andrei", "Khaustau", 39, "andruha", "a123"));
+        users.add(new User(2, "Misha", "Stepovikov", 31, "misha", "m123"));
+        users.add(new User(3, "Dima", "Danilov", 40, "dima", "d123"));
+        users.add(new User(4, "Sasha", "Fatykhov", 47, "sasha", "s123"));
     }
 
     public static UserDao getInstance() {
