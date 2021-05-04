@@ -3,7 +3,6 @@ package com.academy.dao;
 import com.academy.entities.User;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class UserDao {

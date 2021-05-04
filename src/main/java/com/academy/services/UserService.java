@@ -31,7 +31,7 @@ public class UserService {
     }
 
     public void deleteUserById(int id) {
-       userDao.deleteUserById(id);
+        userDao.deleteUserById(id);
     }
 
     public void addUser(String firstName, String lastName, int age, String login, String password) {

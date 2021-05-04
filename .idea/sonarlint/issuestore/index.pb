@@ -31,3 +31,5 @@ K
 src/main/webapp/newUser.jsp,e\b\ebcc5cd3926b329b4ce0715e5ef041d813b7c77b
 f
 6src/main/java/com/academy/servlets/NewUserServlet.java,c\3\c37c41f94d56ae763a134064084ec6b8e82d7157
+Z
+*.idea/libraries/javax_servlet_jstl_1_2.xml,b\0\b06d1ae898bd45f42e809e6b117aba3c01de9ca9
