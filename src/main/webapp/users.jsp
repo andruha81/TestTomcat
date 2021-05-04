@@ -7,29 +7,38 @@
 <head>
     <title>Users list</title>
     <meta content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-
-<h1>Users list</h1>
-
-<table id="users list" title="Users list">
+<jsp:include page="/header.html" />
+<table class="styled-table">
+    <caption><h1>Users list</h1></caption>
+    <thead>
     <tr>
         <th>No</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Age</th>
+        <th></th>
     </tr>
+    </thead>
+    <tbody>
     <c:forEach var="user" items="${requestScope.users}">
-        <tr>
+        <tr class="active-row">
             <td>${user.id}</td>
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
             <td>${user.age}</td>
+            <td><a href="/delete/user?userId=${user.id}">Delete</a></td>
         </tr>
     </c:forEach>
+    </tbody>
 </table>
 
+<form action="/newUser.jsp">
+<button>New User</button>
+</form>
 </body>
 
 </html>

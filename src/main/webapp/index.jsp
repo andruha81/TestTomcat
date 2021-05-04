@@ -7,9 +7,13 @@
 <head>
     <title>Login page</title>
     <meta content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
+
+<jsp:include page="/header.html" />
+
 <form action="login" method="post">
     <c:choose>
         <c:when test="${requestScope.isLogged != null && requestScope.isLogged.equals('false')}">
@@ -28,5 +32,7 @@
 
     <input type="submit" value="login">
 </form>
+
+<jsp:include page="/footer.html" />
 </body>
 </html>

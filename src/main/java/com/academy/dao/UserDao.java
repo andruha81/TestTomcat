@@ -3,6 +3,7 @@ package com.academy.dao;
 import com.academy.entities.User;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class UserDao {
@@ -25,5 +26,19 @@ public class UserDao {
 
     public List<User> getUsers() {
         return users;
+    }
+
+    public void deleteUserById(int id) {
+        users.stream()
+                .filter(u -> u.getId() == id)
+                .findFirst()
+                .ifPresent(users::remove);
+    }
+
+    public void addUser(String firstName, String lastName, int age, String login, String password) {
+        int lastId = users.stream()
+                .mapToInt(User::getId)
+                .max().orElse(0);
+        users.add(new User(lastId + 1, firstName, lastName, age, login, password));
     }
 }

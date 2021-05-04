@@ -10,17 +10,16 @@ import java.io.IOException;
 
 @WebFilter(urlPatterns = "/login")
 public class UserFilter implements Filter {
-    private static final Logger LOGGER = LogManager.getLogger(UserFilter.class);
+    private static final Logger LOGGER = LogManager.getLogger(com.academy.filters.UserFilter.class);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-        UserService userService = new UserService();
         String login = servletRequest.getParameter("login");
         String password = servletRequest.getParameter("password");
 
 
-        if (userService.checkLoginPassword(login, password)) {
+        if (UserService.getInstance().checkLoginPassword(login, password)) {
             LOGGER.info(String.format("Successful logging for user %s", login));
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
