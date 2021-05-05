@@ -20,7 +20,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<User> users = UserService.getInstance().getUsers();
-
         req.setAttribute("users", users);
         req.getRequestDispatcher("/users.jsp").forward(req, resp);
     }

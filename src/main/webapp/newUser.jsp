@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<jsp:include page="/header.html" />
+<jsp:include page="header.html" />
 
 <form action="/user/new" method="post">
     <label for="firstName">First Name:</label>
@@ -28,6 +28,5 @@
     <br>
     <input type="submit">
 </form>
-
 </body>
 </html>

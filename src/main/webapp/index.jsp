@@ -12,7 +12,7 @@
 
 <body>
 
-<jsp:include page="/header.html" />
+<jsp:include page="header.html" />
 
 <form action="login" method="post">
     <c:choose>
@@ -32,7 +32,5 @@
 
     <input type="submit" value="login">
 </form>
-
-<jsp:include page="/footer.html" />
 </body>
 </html>

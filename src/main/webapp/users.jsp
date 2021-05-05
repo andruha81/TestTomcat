@@ -11,12 +11,13 @@
 </head>
 
 <body>
-<jsp:include page="/header.html" />
+<c:import url="header.html" />
 <table class="styled-table">
     <caption><h1>Users list</h1></caption>
     <thead>
     <tr>
         <th>No</th>
+        <th>id</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Age</th>
@@ -24,8 +25,9 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="user" items="${requestScope.users}">
+    <c:forEach var="user" items="${requestScope.users}" varStatus="counter">
         <tr class="active-row">
+            <td>${counter.count}</td>
             <td>${user.id}</td>
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
@@ -40,5 +42,5 @@
 <button>New User</button>
 </form>
 </body>
-
+<p>${UserService}</p>
 </html>
